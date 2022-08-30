@@ -1,5 +1,7 @@
 export const GifsApp = () => {
   return (
-    <div>GifsApp</div>
+    <>
+    <h1>Gifs App</h1>
+    </>
   )
 }
