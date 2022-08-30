@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AddCategory } from "./components/AddCategory";
 
 export const GifsApp = () => {
   const [categories, setCategories] = useState(["Power Rangers", "Samurai X"]);
@@ -15,7 +16,7 @@ export const GifsApp = () => {
       <h1>Gifs App</h1>
 
       {/* input */}
-      <input type="text" />
+      <AddCategory/>
 
 
       {/* listado Gifs */}
