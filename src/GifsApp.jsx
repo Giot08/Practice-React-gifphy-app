@@ -4,11 +4,11 @@ import { AddCategory } from "./components/AddCategory";
 export const GifsApp = () => {
   const [categories, setCategories] = useState(["Power Rangers", "Samurai X"]);
 
-  const onAddCategory = () => {
-    setCategories(["Power Rangers red", ...categories ]);
-
-  }
-
+  const onAddCategory = (newCategory) => {
+    // console.log(newCategory);
+    setCategories([newCategory, ...categories]);
+    // setCategories(cat => [---cat, 'Valorant]);
+  };
 
   return (
     <>
@@ -16,8 +16,10 @@ export const GifsApp = () => {
       <h1>Gifs App</h1>
 
       {/* input */}
-      <AddCategory setCategories={setCategories} />
-
+      <AddCategory 
+      //setCategories={setCategories} 
+      onNewCategory={onAddCategory}
+      />
 
       {/* listado Gifs */}
       {/* <button onClick={onAddCategory}>Agregar</button> */}
